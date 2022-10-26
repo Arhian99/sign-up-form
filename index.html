@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script src="index.js" defer></script>
-        <title>Sign Up Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto:wght@100;500&display=swap" rel="stylesheet">        <title>Sign Up Form</title>
     </head>
 
     <body>
@@ -19,6 +20,57 @@
             </div>
 
             <div class="container-2">
+                <div class="description">
+                    <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                        <br>
+                        Sign up <em>now</em> to get started.
+                        <br>
+                        <br>
+                        You <em>know</em> you want to.
+                    </h3>
+                </div>
+
+                <form action="/." method="post">
+                    <h2>Lets do this!</h2>
+                    <div class="info-container">
+                        <div class="col-one">
+                            <div>
+                                <label for="f-name">FIRST NAME</label>
+                                <input type="text" name="user-fname" id="f-name">
+                            </div>
+                            <div>
+                                <label for="email">EMAIL</label>
+                                <input type="mail" name="user-email" id="email">
+                            </div>
+                            <div>
+                                <label for="pwd">PASSWORD</label>
+                                <input type="password" name="user-pwd" id="pwd">
+                            </div>
+                        </div>
+
+                        <div class="col-two">
+                            <div>
+                                <label for="l-name">LAST NAME</label>
+                                <input type="text" name="user-lname" id="l-name">
+                            </div>
+                            
+                            <div>
+                                <label for="tel">PHONE NUMBER</label>
+                                <input type="tel" name="user-tel" id="tel">
+                            </div>
+                            
+                            <div>
+                                <label for="conf-pwd">CONFIRM PASSWORD</label>
+                                <input type="password" name="user-conf-pwd" id="conf-pwd">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="submit-container">
+                    <button type="submit">Create Account</button>
+                    <p>Already have an account? <a href="/.">Log In</a></p>
+                </div>
             </div>
         </div>
     </body>
