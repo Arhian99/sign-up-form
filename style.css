@@ -1,0 +1,58 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}  
+
+@font-face {
+    font-family: norse-bold;
+    src: url("images/Norse-Bold.otf") format("opentype");
+}
+
+.main-container {
+    width: 100vw;
+    height: inherit;
+    display: flex;
+}
+.container-1 {
+    width: 40vw;
+
+    background-image: url(images/large-img-unszd.avif);
+    overflow: hidden;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%;
+    font-family: norse-bold; /* good practice is to add a backup font, but zzzzz */
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    top: 150px;
+}
+
+.sidebar img {
+    width: 100px;
+    height: 130px;
+}
+
+.sidebar h1 {
+    color: white;
+    font-size: 100px;
+    margin: 0;
+    padding: 20px 0 0 0;
+    height: auto;
+    width: auto;
+}
+.container-2 {
+    width: max(60vw, 300px);
+}
