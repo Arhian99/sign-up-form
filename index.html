@@ -4,10 +4,13 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="index.js"defer></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto:wght@100;500&display=swap" rel="stylesheet">        <title>Sign Up Form</title>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100;0,500;1,400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />        
+        <title>Sign Up Form</title>
     </head>
 
     <body>
@@ -30,45 +33,45 @@
                     </h3>
                 </div>
 
-                <form action="/." method="post">
+                <form action="/." method="post" id="signup-form" novalidate>
                     <h2>Lets do this!</h2>
+                    <p id="instructions">Required fields are marked by <span class="required">*</span></p>
                     <div class="info-container">
                         <div class="col-one">
                             <div>
-                                <label for="f-name">FIRST NAME</label>
-                                <input type="text" name="user-fname" id="f-name">
+                                <label for="f-name" class="required">FIRST NAME</label>
+                                <input type="text" name="user-fname" id="f-name" pattern="^[A-Za-z -]+$" required placeholder="eg: John">
                             </div>
                             <div>
-                                <label for="email">EMAIL</label>
-                                <input type="mail" name="user-email" id="email">
+                                <label for="email" class="required">Email</label>
+                                <input type="email" name="user-email" id="email" required placeholder="eg: johndoe@email.com">
                             </div>
                             <div>
-                                <label for="pwd">PASSWORD</label>
-                                <input type="password" name="user-pwd" id="pwd">
+                                <label for="pwd" class="required">PASSWORD</label>
+                                <input type="password" name="user-pwd" id="pwd" pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#\$%\^&\*])(?=.*[a-zA-Z0-9!@#\$%\^&\*])([a-zA-Z0-9!@#\$%\^&\*]{8,20})$" required>
                             </div>
                         </div>
-
                         <div class="col-two">
                             <div>
-                                <label for="l-name">LAST NAME</label>
-                                <input type="text" name="user-lname" id="l-name">
+                                <label for="l-name" class="required">LAST NAME</label>
+                                <input type="text" name="user-lname" id="l-name" pattern="^[A-Za-z -]+$" required placeholder="eg: Doe">
                             </div>
                             
                             <div>
                                 <label for="tel">PHONE NUMBER</label>
-                                <input type="tel" name="user-tel" id="tel">
+                                <input type="tel" name="user-tel" id="tel" minlength="10" maxlength="10" pattern="^[0-9]*$" placeholder="eg: 1234567890">
                             </div>
                             
                             <div>
-                                <label for="conf-pwd">CONFIRM PASSWORD</label>
-                                <input type="password" name="user-conf-pwd" id="conf-pwd">
+                                <label for="conf-pwd" class="required">CONFIRM PASSWORD</label>
+                                <input type="password" name="user-conf-pwd" id="conf-pwd" required>
                             </div>
                         </div>
                     </div>
                 </form>
 
                 <div class="submit-container">
-                    <button type="submit">Create Account</button>
+                    <button type="submit" form="signup-form" formnovalidate>Create Account</button>
                     <p>Already have an account? <a href="/.">Log In</a></p>
                 </div>
             </div>
