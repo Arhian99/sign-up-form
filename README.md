@@ -1,3 +1,3 @@
 # sign-up-form
 
-LIVE DEMO: https://raw.githack.com/Arhian99/sign-up-form/main/index.html
+LIVE DEMO: https://arhian99.github.io/sign-up-form/
